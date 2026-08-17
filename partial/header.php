@@ -6,7 +6,7 @@
         </div>
 
         <nav class="navbar">
-            <a href="#">Home</a>
+            <a href="./index.php">Home</a>
             <a href="./sobre.php">Sobre</a>
             <a href="#">Serviços</a>
             <a href="./frota.php">Frota</a>
