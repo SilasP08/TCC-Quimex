@@ -34,7 +34,7 @@
 
             <p>Cadastre-se para utilizar os serviços da QUIMEX.</p>
 
-            <form>
+            <form action="./function/create.php" method="POST">
 
                 <div class="grid">
 
@@ -42,7 +42,7 @@
 
                         <i class="fa-solid fa-user"></i>
 
-                        <input type="text" placeholder="Nome Completo">
+                        <input type="text" name="nome" placeholder="Nome Completo">
 
                     </div>
 
@@ -50,7 +50,7 @@
 
                         <i class="fa-solid fa-envelope"></i>
 
-                        <input type="email" placeholder="E-mail">
+                        <input type="email" name="email" placeholder="E-mail">
 
                     </div>
 
@@ -58,7 +58,7 @@
 
                         <i class="fa-solid fa-phone"></i>
 
-                        <input type="text" placeholder="Telefone">
+                        <input type="text" name="telefone" placeholder="Telefone">
 
                     </div>
 
@@ -66,7 +66,7 @@
 
                         <i class="fa-solid fa-id-card"></i>
 
-                        <input type="text" placeholder="CPF ou CNPJ">
+                        <input type="text" name="cpf_cnpj" placeholder="CPF ou CNPJ">
 
                     </div>
 
@@ -74,7 +74,7 @@
 
                         <i class="fa-solid fa-user-group"></i>
 
-                        <select required>
+                        <select name="tipo" required>
 
                             <option value="" selected disabled>
                                 Selecione o tipo de pessoa
@@ -98,21 +98,13 @@
 
                         <i class="fa-solid fa-lock"></i>
 
-                        <input type="password" placeholder="Senha">
-
-                    </div>
-
-                    <div class="input-box full">
-
-                        <i class="fa-solid fa-lock"></i>
-
-                        <input type="password" placeholder="Confirmar Senha">
+                        <input type="password" name="senha" placeholder="Senha">
 
                     </div>
 
                 </div>
 
-                <button>
+                <button type="submit">
 
                     Criar Conta
 
