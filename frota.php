@@ -13,27 +13,9 @@
 
     <body>
 
-        <!-- HEADER -->
-
-        <header class="header">
-
-            <div class="logo">
-                <img src="img/logo_quimex.png" alt="Logo QUIMEX">
-            </div>
-
-            <nav class="navbar">
-                <a href="./index.php">Home</a>
-                <a href="./sobre.php">Sobre</a>
-                <a href="#">Serviços</a>
-                <a href="#">Projetos</a>
-                <a href="#">Contato</a>
-            </nav>
-
-            <div class="header-btn">
-                <a href="#">Solicitar orçamento</a>
-            </div>
-
-        </header>
+        <?php
+        require_once "./partial/header.php";
+        ?>
 
 
 
