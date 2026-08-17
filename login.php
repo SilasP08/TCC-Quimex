@@ -1,3 +1,42 @@
+<?php
+
+session_start();
+
+require_once './crud.php';
+
+$erro = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+
+    $user = read(
+        $pdo,
+        'users',
+        "email = '$email'"
+    );
+
+    if ($user && password_verify($senha, $user['senha'])) {
+
+        $_SESSION['id_user'] = $user['id_user'];
+        $_SESSION['nome'] = $user['nome'];
+        $_SESSION['email'] = $user['email'];
+        $_SESSION['tipo'] = $user['tipo'];
+
+        header('Location: inicio.php');
+        exit;
+
+    } else {
+
+        $erro = 'E-mail ou senha incorretos.';
+
+    }
+}
+
+print_r($_SESSION)
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +49,7 @@
 
 <body>
     <?php
-        require_once "./partial/header.php";
+    require_once "./partial/header.php";
     ?>
     <section class="login">
 
@@ -26,28 +65,28 @@
                 Faça login para acessar o painel da QUIMEX.
             </p>
 
-            <form>
+            <form method="POST">
 
                 <div class="input-box">
 
                     <i class="fa-solid fa-envelope"></i>
 
-                    <input type="email" placeholder="Digite seu e-mail">
+                    <input type="email" name="email" placeholder="Digite seu e-mail" required>
 
                 </div>
+
 
                 <div class="input-box">
 
                     <i class="fa-solid fa-lock"></i>
 
-                    <input type="password" placeholder="Digite sua senha">
+                    <input type="password" name="senha" placeholder="Digite sua senha" required>
 
                 </div>
 
-                <button>
 
+                <button type="submit">
                     Entrar
-
                 </button>
 
             </form>
