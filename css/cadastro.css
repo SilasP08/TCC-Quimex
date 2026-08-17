@@ -1,0 +1,506 @@
+/* ===================================================
+   GOOGLE FONTS
+=================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================================
+   VARIÁVEIS
+=================================================== */
+
+:root {
+
+    /* CORES */
+
+    --black: #07060D;
+    --dark-blue: #123458;
+    --white: #F8FAFC;
+    --dark-green: #164030;
+    --green: #36BF66;
+
+    /* AUXILIARES */
+
+    --gray-text: rgba(248, 250, 252, 0.75);
+    --gray-border: rgba(255, 255, 255, 0.12);
+
+    /* SOMBRAS */
+
+    --shadow-green:
+        0 0 25px rgba(54, 191, 102, 0.25);
+
+    --shadow-blue:
+        0 0 30px rgba(18, 52, 88, 0.35);
+
+    /* TRANSIÇÕES */
+
+    --transition: 0.3s ease;
+
+}
+
+/* ===================================================
+   RESET
+=================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===================================================
+   BODY
+=================================================== */
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    overflow-x: hidden;
+}
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+.header {
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 80px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 999;
+
+    background:
+        rgba(7, 6, 13, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* LOGO */
+
+.logo img {
+
+    width: 190px;
+}
+
+/* NAVBAR */
+
+.navbar {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+/* LINKS */
+
+.navbar a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: var(--white);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+/* HOVER */
+
+.navbar a:hover {
+
+    color: var(--green);
+}
+
+/* LINHA HOVER */
+
+.navbar a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--green);
+
+    border-radius: 20px;
+
+    transition: var(--transition);
+}
+
+.navbar a:hover::after {
+
+    width: 100%;
+}
+
+/* BOTÃO */
+
+.header-btn a {
+
+    text-decoration: none;
+
+    color: var(--white);
+
+    background: var(--green);
+
+    padding: 14px 28px;
+
+    border-radius: 12px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-green);
+}
+
+/* HOVER BOTÃO */
+
+.header-btn a:hover {
+
+    background: #2ea858;
+
+    transform: translateY(-2px);
+}
+
+
+/*=========================
+FUNDO
+=========================*/
+
+.register {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        linear-gradient(rgba(7, 6, 13, .88),
+            rgba(18, 52, 88, .75)),
+        url("../img/login-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 50px 20px;
+    margin-top: 100px;
+}
+
+.register-box {
+
+    width: 850px;
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+    background: var(--glass);
+
+    backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+/*=========================
+LOGO
+=========================*/
+
+.logo {
+
+    width: 180px;
+
+    display: block;
+
+    margin: auto;
+}
+
+.register-box h1 {
+
+    text-align: center;
+
+    color: var(--white);
+
+    margin: 30px 0 10px;
+}
+
+.register-box p {
+
+    text-align: center;
+
+    color: rgba(255, 255, 255, .8);
+
+    margin-bottom: 35px;
+}
+
+/*=========================
+GRID
+=========================*/
+
+.grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.full {
+
+    grid-column: 1/3;
+}
+
+/* INPUT BOX */
+
+.input-box {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    height: 58px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .15);
+
+    border-radius: 14px;
+
+    padding: 0 18px;
+
+    transition: .3s;
+}
+
+.input-box:hover {
+
+    border-color: rgba(54, 191, 102, .6);
+}
+
+.input-box:focus-within {
+
+    border-color: var(--green);
+
+    box-shadow: 0 0 15px rgba(54, 191, 102, .25);
+}
+
+.input-box i:first-child {
+
+    color: var(--green);
+
+    font-size: 18px;
+
+    margin-right: 15px;
+}
+
+/* SELECT */
+
+.input-box select {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    -moz-appearance: none;
+
+    padding-right: 35px;
+}
+
+/* PLACEHOLDER */
+
+.input-box select:invalid {
+
+    color: rgba(255, 255, 255, .55);
+}
+
+/* OPÇÕES */
+
+.input-box option {
+
+    background: var(--black);
+
+    color: var(--white);
+}
+
+/* SETA */
+
+.select-arrow {
+
+    position: absolute;
+
+    right: 20px;
+
+    color: var(--green);
+
+    font-size: 14px;
+
+    pointer-events: none;
+
+    transition: .3s;
+}
+
+/* GIRA A SETA */
+
+.input-box:focus-within .select-arrow {
+
+    transform: rotate(180deg);
+}
+
+.input-box option {
+    background: #123458;
+    color: #F8FAFC;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.input-box input {
+
+    width: 100%;
+
+    background: none;
+
+    border: none;
+
+    outline: none;
+
+    color: var(--white);
+
+    font-size: 15px;
+}
+
+.input-box input::placeholder {
+
+    color: rgba(255, 255, 255, .6);
+}
+
+/*=========================
+BOTÃO
+=========================*/
+
+button {
+
+    width: 100%;
+
+    height: 58px;
+
+    margin-top: 35px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: var(--green);
+
+    color: white;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+button:hover {
+
+    background: var(--green-dark);
+
+    transform: translateY(-3px);
+}
+
+/*=========================
+LOGIN
+=========================*/
+
+.login-link {
+
+    margin-top: 30px;
+
+    text-align: center;
+
+    color: var(--white);
+}
+
+.login-link a {
+
+    color: var(--green);
+
+    font-weight: 600;
+}
+
+/*=========================
+RESPONSIVO
+=========================*/
+
+@media(max-width:768px) {
+
+    .register-box {
+
+        width: 100%;
+
+        padding: 35px 25px;
+    }
+
+    .grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .full {
+
+        grid-column: auto;
+    }
+
+}
