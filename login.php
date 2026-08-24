@@ -14,17 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user = read(
         $pdo,
         'users',
-        "email = '$email'"
+        "email = '$email' AND senha = '$senha'"
     );
 
-    if ($user && password_verify($senha, $user['senha'])) {
+    if ($user) {
 
         $_SESSION['id_user'] = $user['id_user'];
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['email'] = $user['email'];
         $_SESSION['tipo'] = $user['tipo'];
 
-        header('Location: inicio.php');
+        header('Location: ./index.php');
         exit;
 
     } else {
@@ -34,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
-print_r($_SESSION)
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +64,7 @@ print_r($_SESSION)
                 Faça login para acessar o painel da QUIMEX.
             </p>
 
-            <form method="POST">
+            <form action="./login.php" method="POST">
 
                 <div class="input-box">
 
