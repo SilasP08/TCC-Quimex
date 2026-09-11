@@ -41,38 +41,27 @@ CREATE TABLE IF NOT EXISTS users (
 -- TABELA DE FORMULÁRIOS
 -- ============================================
 
-CREATE TABLE IF NOT EXISTS formularios (
+CREATE TABLE solicitacoes (
+    id_solicitacao INT AUTO_INCREMENT PRIMARY KEY,
+    id_user INT NOT NULL,
+    servico VARCHAR(150) NOT NULL,
+    produto VARCHAR(150) NOT NULL,
+    local_entrega VARCHAR(255) NOT NULL,
+    data_transporte DATE NOT NULL,
+    quantidade VARCHAR(100),
+    observacoes TEXT,
+    status ENUM('Aguardando pagamento',
+    'Separando pedido',
+    'Em transporte',
+    'Concluído',
+    'Cancelado')
+        DEFAULT 'Aguardando pagamento',
+    data_solicitacao DATETIME DEFAULT CURRENT_TIMESTAMP,
 
-    id_formulario INT AUTO_INCREMENT PRIMARY KEY,
-
-    id_user INT NULL,
-
-    nome VARCHAR(150) NOT NULL,
-
-    email VARCHAR(150) NOT NULL,
-
-    telefone VARCHAR(20),
-
-    assunto VARCHAR(150) NOT NULL,
-
-    mensagem TEXT NOT NULL,
-
-    data_envio DATETIME DEFAULT CURRENT_TIMESTAMP,
-
-    status ENUM(
-        'Pendente',
-        'Em atendimento',
-        'Respondido'
-    ) DEFAULT 'Pendente',
-
-    CONSTRAINT fk_formulario_user
-        FOREIGN KEY (id_user)
-        REFERENCES users(id_user)
-        ON DELETE SET NULL
-        ON UPDATE CASCADE
-
+    FOREIGN KEY (id_user)
+    REFERENCES users(id_user)
+    ON DELETE CASCADE
 );
-
 
 -- ============================================
 -- FIM DO SCRIPT
