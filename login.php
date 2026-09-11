@@ -19,23 +19,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($user) {
 
+        // Criar a sessão
         $_SESSION['id_user'] = $user['id_user'];
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['email'] = $user['email'];
         $_SESSION['tipo'] = $user['tipo'];
 
+        // Só redireciona se o usuário existir
         header('Location: ./index.php');
         exit;
 
     } else {
 
+        // Senha ou email incorretos
         $erro = 'E-mail ou senha incorretos.';
 
     }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 

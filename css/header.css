@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/* ===================================================
+   VARIÁVEIS
+=================================================== */
+
+:root {
+
+    --black: #07060D;
+    --dark-blue: #123458;
+    --white: #F8FAFC;
+    --dark-green: #164030;
+    --green: #36BF66;
+
+    --gray-text: rgba(248,250,252,0.75);
+    --gray-border: rgba(255,255,255,0.12);
+
+    --shadow-green:
+    0 0 25px rgba(54,191,102,0.25);
+
+    --shadow-blue:
+    0 0 30px rgba(18,52,88,0.35);
+
+    --transition: 0.3s ease;
+}
+
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+.header {
+
+    width: 100%;
+    height: 90px;
+
+    padding: 0 80px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    z-index: 997;
+
+    background:
+    rgba(7, 6, 13, 0.92);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.05);
+
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ===================================================
+   LOGO
+=================================================== */
+
+.logo img {
+
+    width: 190px;
+
+    display: block;
+
+}
+
+
+/* ===================================================
+   MENU
+=================================================== */
+
+.menu {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+
+/* ===================================================
+   LINKS
+=================================================== */
+
+.menu a {
+
+    position: relative;
+
+    text-decoration: none;
+
+    color: var(--white);
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: var(--transition);
+
+}
+
+
+/* HOVER */
+
+.menu a:hover {
+
+    color: var(--green);
+
+}
+
+
+/* LINHA */
+
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0%;
+    height: 2px;
+
+    background: var(--green);
+
+    border-radius: 20px;
+
+    transition: var(--transition);
+
+}
+
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* ===================================================
+   ÁREA LOGIN
+=================================================== */
+
+.area-login {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+}
+
+
+/* ===================================================
+   BOTÃO ENTRAR
+=================================================== */
+
+.btn-login {
+
+    text-decoration: none;
+
+    color: var(--white);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    padding: 12px 20px;
+
+    border: 1px solid var(--green);
+
+    border-radius: 10px;
+
+    transition: var(--transition);
+
+}
+
+
+.btn-login:hover {
+
+    background: var(--green);
+
+    color: var(--white);
+
+}
+
+
+/* ===================================================
+   BOTÃO CADASTRO
+=================================================== */
+
+.btn-cadastro {
+
+    text-decoration: none;
+
+    color: var(--white);
+
+    background: var(--green);
+
+    padding: 12px 22px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+.btn-cadastro:hover {
+
+    background: #2ea858;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* ===================================================
+   FOTO DE PERFIL
+=================================================== */
+
+.foto-perfil {
+
+    width: 48px;
+    height: 48px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    border: 2px solid var(--green);
+
+    background: transparent;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: var(--transition);
+
+}
+
+
+.foto-perfil:hover {
+
+    transform: scale(1.08);
+
+    box-shadow: var(--shadow-green);
+
+}
+
+
+.foto-perfil img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* ===================================================
+   OVERLAY
+=================================================== */
+
+.overlay {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: var(--transition);
+
+    z-index: 998;
+
+}
+
+
+.overlay.ativo {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+/* ===================================================
+   SIDEBAR
+=================================================== */
+
+.sidebar {
+
+    position: fixed;
+
+    top: 0;
+    right: -360px;
+
+    width: 340px;
+    height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 30px;
+
+    background: var(--dark-blue);
+
+    transition: 0.4s ease;
+
+    z-index: 999;
+
+    box-shadow:
+    -10px 0 30px rgba(0,0,0,0.35);
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+.sidebar.ativo {
+
+    right: 0;
+
+}
+
+
+/* ===================================================
+   BOTÃO FECHAR
+=================================================== */
+
+.fechar-sidebar {
+
+    position: absolute;
+
+    top: 15px;
+    right: 20px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--white);
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+
+}
+
+
+.fechar-sidebar:hover {
+
+    color: var(--green);
+
+    transform: rotate(90deg);
+
+}
+
+
+/* ===================================================
+   PERFIL DA SIDEBAR
+=================================================== */
+
+.perfil-sidebar {
+
+    text-align: center;
+
+    margin-top: 35px;
+
+    padding-bottom: 25px;
+
+    border-bottom:
+    1px solid var(--gray-border);
+
+}
+
+
+.perfil-sidebar img {
+
+    width: 95px;
+    height: 95px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 3px solid var(--green);
+
+    box-shadow: var(--shadow-green);
+
+    margin-bottom: 15px;
+
+}
+
+
+.perfil-sidebar h3 {
+
+    color: var(--white);
+
+    margin: 5px 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+
+.perfil-sidebar p {
+
+    color: var(--gray-text);
+
+    margin: 5px 0;
+
+    font-size: 13px;
+
+    word-break: break-word;
+
+}
+
+
+/* ===================================================
+   OPÇÕES
+=================================================== */
+
+.opcoes-sidebar {
+
+    margin-top: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.opcoes-sidebar a {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    transition: var(--transition);
+
+}
+
+
+.opcoes-sidebar a:hover {
+
+    background: var(--dark-green);
+
+    transform: translateX(5px);
+
+}
+
+
+.opcoes-sidebar span {
+
+    font-size: 20px;
+
+}
+
+
+/* ===================================================
+   LOGOUT
+=================================================== */
+
+.opcoes-sidebar .logout {
+
+    margin-top: 15px;
+
+    border-top:
+    1px solid var(--gray-border);
+
+    border-radius: 0;
+
+    padding-top: 22px;
+
+}
+
+
+.opcoes-sidebar .logout:hover {
+
+    color: #ff6b6b;
+
+    background: transparent;
+
+}
+
+
+/* ===================================================
+   RESPONSIVIDADE
+=================================================== */
+
+@media (max-width: 1000px) {
+
+    .header {
+
+        padding: 0 30px;
+
+    }
+
+    .menu {
+
+        gap: 20px;
+
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .menu {
+
+        display: none;
+
+    }
+
+    .header {
+
+        padding: 0 25px;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .logo img {
+
+        width: 150px;
+
+    }
+
+    .sidebar {
+
+        width: 300px;
+
+    }
+
+}
