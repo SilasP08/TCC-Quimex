@@ -209,7 +209,7 @@ if (!$pedido) {
 
 
                     <form
-                        action="<?php echo $base; ?>func/processar_pagamento.php"
+                        action="<?php echo $base; ?>function/processar_pagamento.php"
                         method="POST"
                     >
 
@@ -233,7 +233,7 @@ if (!$pedido) {
 
 
                     <a
-                        href="<?php echo $base; ?>pedidos.php"
+                        href="<?php echo $base; ?>user/pedidos.php"
                         class="btn-voltar"
                     >
 
