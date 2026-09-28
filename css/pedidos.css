@@ -443,3 +443,144 @@ tbody tr:hover {
     }
 
 }
+
+/* ================================
+   STATUS - EM ANÁLISE
+================================ */
+
+.status-analise {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(18, 52, 88, 0.35);
+
+    border:
+        1px solid rgba(139, 192, 214, 0.35);
+
+    color: #8BC0D6;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* ================================
+   BOTÃO PAGAR
+================================ */
+
+.btn-pagar {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    background: var(--green);
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+
+}
+
+.btn-pagar:hover {
+
+    background: #2ea858;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 15px rgba(54, 191, 102, 0.35);
+
+}
+
+
+/* ================================
+   PAGAMENTO REALIZADO
+================================ */
+
+.pagamento-ok {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(54, 191, 102, 0.12);
+
+    border:
+        1px solid rgba(54, 191, 102, 0.25);
+
+    color: var(--green);
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* ================================
+   RECUSADO
+================================ */
+
+.status-recusado {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 7px 13px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 107, 107, 0.10);
+
+    border:
+        1px solid rgba(255, 107, 107, 0.20);
+
+    color: #ff6b6b;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+}
+
+
+/* ================================
+   SEM AÇÃO
+================================ */
+
+.sem-acao {
+
+    color: var(--gray-text);
+
+}
