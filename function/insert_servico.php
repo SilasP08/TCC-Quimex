@@ -17,7 +17,7 @@ $add = [
     'data_transporte' => $_POST['data_transporte'],
     'quantidade' => $_POST['quantidade'],
     'observacoes' => $_POST['observacoes'],
-    'status' => 'Aguardando pagamento'
+    'status' => 'Em análise'
 ];
 
 create($pdo, 'solicitacoes', $add);

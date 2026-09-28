@@ -38,182 +38,188 @@ $pedidos = readAll(
 
 <body>
 
-<?php require_once  '../partial/header.php'; ?>
+    <?php require_once '../partial/header.php'; ?>
 
 
-<main class="pagina-pedidos">
+    <main class="pagina-pedidos">
 
-    <section class="pedidos-container">
+        <section class="pedidos-container">
 
-        <div class="titulo-pedidos">
+            <div class="titulo-pedidos">
 
-            <span>QUIMEX</span>
+                <span>QUIMEX</span>
 
-            <h1>Meus pedidos</h1>
+                <h1>Meus pedidos</h1>
 
-            <p>
-                Acompanhe suas solicitações de transporte.
-            </p>
-
-        </div>
-
-
-        <div class="acoes-pedidos">
-
-            <a
-                href="<?php echo $base; ?>user/perfil.php"
-                class="btn-voltar"
-            >
-                Meu perfil
-            </a>
-
-            <a
-                href="<?php echo $base; ?>servico.php"
-                class="btn-novo-pedido"
-            >
-                + Novo pedido
-            </a>
-
-        </div>
-
-
-        <?php if ($pedidos): ?>
-
-            <div class="tabela-container">
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>Serviço</th>
-                            <th>Produto</th>
-                            <th>Local de entrega</th>
-                            <th>Data</th>
-                            <th>Quantidade</th>
-                            <th>Status</th>
-                            <th>Ação</th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody>
-
-                        <?php foreach ($pedidos as $pedido): ?>
-
-                            <tr>
-
-                                <td>
-                                    <?php echo $pedido['servico']; ?>
-                                </td>
-
-                                <td>
-                                    <?php echo $pedido['produto']; ?>
-                                </td>
-
-                                <td>
-                                    <?php echo $pedido['local_entrega']; ?>
-                                </td>
-
-                                <td>
-                                    <?php
-                                    echo date(
-                                        'd/m/Y',
-                                        strtotime($pedido['data_transporte'])
-                                    );
-                                    ?>
-                                </td>
-
-                                <td>
-                                    <?php echo $pedido['quantidade']; ?>
-                                </td>
-
-                                <td>
-
-                                    <span class="status">
-
-                                        <?php echo $pedido['status']; ?>
-
-                                    </span>
-
-                                </td>
-
-                                <td>
-
-                                    <?php if ($pedido['status'] == 'Aguardando pagamento'): ?>
-
-                                        <a
-                                            href="<?php echo $base; ?>user/pagamento.php?id=<?php echo $pedido['id_solicitacao']; ?>"
-                                            class="btn-pagar"
-                                        >
-                                            Pagar serviço
-                                        </a>
-
-                                    <?php elseif ($pedido['status'] == 'Separando pedido'): ?>
-
-                                        <span class="pagamento-ok">
-                                            Pagamento realizado
-                                        </span>
-
-                                    <?php else: ?>
-
-                                        <span class="sem-acao">
-                                            -
-                                        </span>
-
-                                    <?php endif; ?>
-
-                                </td>
-                        </td>
-
-
-                            </tr>
-
-                        <?php endforeach; ?>
-
-                    </tbody>
-
-                </table>
+                <p>
+                    Acompanhe suas solicitações de transporte.
+                </p>
 
             </div>
 
 
-        <?php else: ?>
+            <div class="acoes-pedidos">
 
+                <a href="<?php echo $base; ?>user/perfil.php" class="btn-voltar">
+                    Meu perfil
+                </a>
 
-            <div class="sem-pedidos">
-
-                <div class="icone-pedidos">
-                    📋
-                </div>
-
-                <h2>
-                    Você ainda não possui pedidos
-                </h2>
-
-                <p>
-                    Quando você solicitar um serviço,
-                    ele aparecerá aqui.
-                </p>
-
-                <a
-                    href="<?php echo $base; ?>servico.php"
-                >
-                    Solicitar serviço
+                <a href="<?php echo $base; ?>servico.php" class="btn-novo-pedido">
+                    + Novo pedido
                 </a>
 
             </div>
 
 
-        <?php endif; ?>
+            <?php if ($pedidos): ?>
+
+                <div class="tabela-container">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Serviço</th>
+                                <th>Produto</th>
+                                <th>Local de entrega</th>
+                                <th>Data</th>
+                                <th>Quantidade</th>
+                                <th>Status</th>
+                                <th>Ação</th>
+
+                            </tr>
+
+                        </thead>
 
 
-    </section>
+                        <tbody>
 
-</main>
+                            <?php foreach ($pedidos as $pedido): ?>
+
+                                <tr>
+
+                                    <td>
+                                        <?php echo $pedido['servico']; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo $pedido['produto']; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo $pedido['local_entrega']; ?>
+                                    </td>
+
+                                    <td>
+                                        <?php
+                                        echo date(
+                                            'd/m/Y',
+                                            strtotime($pedido['data_transporte'])
+                                        );
+                                        ?>
+                                    </td>
+
+                                    <td>
+                                        <?php echo $pedido['quantidade']; ?>
+                                    </td>
+
+                                    <td>
+
+                                        <span class="status">
+
+                                            <?php echo $pedido['status']; ?>
+
+                                        </span>
+
+                                    </td>
+
+                                    <td>
+
+                                        <?php if ($pedido['status'] == 'Em análise'): ?>
+
+                                            <span class="status-analise">
+                                                Em análise
+                                            </span>
+
+
+                                        <?php elseif ($pedido['status'] == 'Aguardando pagamento'): ?>
+
+                                            <a href="<?php echo $base; ?>pagamento.php?id=<?php echo $pedido['id_solicitacao']; ?>"
+                                                class="btn-pagar">
+                                                Pagar serviço
+                                            </a>
+
+
+                                        <?php elseif ($pedido['status'] == 'Separando pedido'): ?>
+
+                                            <span class="pagamento-ok">
+                                                Pagamento realizado
+                                            </span>
+
+
+                                        <?php elseif ($pedido['status'] == 'Recusado'): ?>
+
+                                            <span class="status-recusado">
+                                                Solicitação recusada
+                                            </span>
+
+
+                                        <?php else: ?>
+
+                                            <span class="sem-acao">
+                                                -
+                                            </span>
+
+                                        <?php endif; ?>
+
+                                    </td>
+                                    </td>
+
+
+                                </tr>
+
+                            <?php endforeach; ?>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+            <?php else: ?>
+
+
+                <div class="sem-pedidos">
+
+                    <div class="icone-pedidos">
+                        📋
+                    </div>
+
+                    <h2>
+                        Você ainda não possui pedidos
+                    </h2>
+
+                    <p>
+                        Quando você solicitar um serviço,
+                        ele aparecerá aqui.
+                    </p>
+
+                    <a href="<?php echo $base; ?>servico.php">
+                        Solicitar serviço
+                    </a>
+
+                </div>
+
+
+            <?php endif; ?>
+
+
+        </section>
+
+    </main>
 
 </body>
 
