@@ -1,44 +1,113 @@
 <?php
-$base = '/TCC-Quimex/';
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 $base = '/TCC-Quimex/';
+
+$logado = isset($_SESSION['id_user']);
+
+$nivel = '';
+
+if ($logado && isset($_SESSION['nivel'])) {
+    $nivel = $_SESSION['nivel'];
+}
+
 
 ?>
 
 <link rel="stylesheet" href="<?php echo $base; ?>css/header.css">
 
+
 <header class="header">
 
+    <!-- LOGO -->
+
     <div class="logo">
+
         <a href="<?php echo $base; ?>index.php">
-            <img src="<?php echo $base; ?>img/logo_quimex.png" alt="Quimex">
+
+            <img
+                src="<?php echo $base; ?>img/logo_quimex.png"
+                alt="Quimex"
+            >
+
         </a>
+
     </div>
 
-    <nav class="menu">
 
-        <a href="<?php echo $base; ?>index.php">Início</a>
+    <!-- MENU -->
 
-        <a href="<?php echo $base; ?>sobre.php">Sobre nós</a>
+   <?php if ($logado && $nivel === 'admin'): ?>
 
-        <a href="<?php echo $base; ?>frota.php">Nossa Frota</a>
+        <!-- MENU DO ADMIN -->
 
-        <a href="<?php echo $base; ?>servico.php">Serviços</a>
+        <nav class="menu">
 
-        <a href="<?php echo $base; ?>contato.php">Contato</a>
+            <a href="<?php echo $base; ?>admin.php">
+                Dashboard
+            </a>
 
-    </nav>
+            <a href="<?php echo $base; ?>admin/perfil.php">
+                Meu Perfil
+            </a>
+
+            <a href="<?php echo $base; ?>admin/pedidos.php">
+                Contratos
+            </a>
+
+            <a href="<?php echo $base; ?>admin/clientes.php">
+                Clientes
+            </a>
+
+        </nav>
+
+    <?php else: ?>
+
+        <!-- MENU NORMAL -->
+
+        <nav class="menu">
+
+            <a href="<?php echo $base; ?>index.php">
+                Início
+            </a>
+
+            <a href="<?php echo $base; ?>sobre.php">
+                Sobre nós
+            </a>
+
+            <a href="<?php echo $base; ?>frota.php">
+                Nossa Frota
+            </a>
+
+            <a href="<?php echo $base; ?>servico.php">
+                Serviços
+            </a>
+
+            <a href="<?php echo $base; ?>contato.php">
+                Contato
+            </a>
+
+        </nav>
+
+    <?php endif; ?>
+
+
+    <!-- ÁREA DO USUÁRIO -->
 
     <div class="area-login">
 
-        <?php if (isset($_SESSION['id_user'])): ?>
+        <?php if ($logado): ?>
 
-            <!-- USUÁRIO LOGADO -->
+            <button
+                type="button"
+                class="foto-perfil"
+                onclick="abrirSidebar()"
+            >
 
-            <button class="foto-perfil" onclick="abrirSidebar()">
-
-                <img 
-                    src="<?php echo $base; ?>img/perfil.png" 
+                <img
+                    src="<?php echo $base; ?>img/perfil.png"
                     alt="Perfil"
                 >
 
@@ -46,17 +115,15 @@ $base = '/TCC-Quimex/';
 
         <?php else: ?>
 
-            <!-- USUÁRIO NÃO LOGADO -->
-
-            <a 
-                href="<?php echo $base; ?>login.php" 
+            <a
+                href="<?php echo $base; ?>login.php"
                 class="btn-login"
             >
                 Entrar
             </a>
 
-            <a 
-                href="<?php echo $base; ?>cadastro.php" 
+            <a
+                href="<?php echo $base; ?>cadastro.php"
                 class="btn-cadastro"
             >
                 Cadastro
@@ -69,98 +136,175 @@ $base = '/TCC-Quimex/';
 </header>
 
 
-<!-- =====================================
-     SIDEBAR DO USUÁRIO
-===================================== -->
+<?php if ($logado): ?>
 
-<?php if (isset($_SESSION['id_user'])): ?>
+    <!-- OVERLAY -->
 
-    <div 
-        class="overlay" 
-        id="overlay" 
+    <div
+        class="overlay"
+        id="overlay"
         onclick="fecharSidebar()"
     ></div>
 
-    <aside class="sidebar" id="sidebar">
 
-        <button 
-            class="fechar-sidebar" 
+    <!-- SIDEBAR -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <button
+            type="button"
+            class="fechar-sidebar"
             onclick="fecharSidebar()"
         >
             &times;
         </button>
 
 
+        <!-- INFORMAÇÕES DO USUÁRIO -->
+
         <div class="perfil-sidebar">
 
-            <img 
-                src="<?php echo $base; ?>img/perfil.png" 
+            <img
+                src="<?php echo $base; ?>img/perfil.png"
                 alt="Foto de perfil"
             >
 
             <h3>
-                <?php echo $_SESSION['nome']; ?>
+                <?php echo htmlspecialchars($_SESSION['nome']); ?>
             </h3>
 
             <p>
-                <?php echo $_SESSION['email']; ?>
+                <?php echo htmlspecialchars($_SESSION['email']); ?>
             </p>
 
         </div>
 
 
+        <!-- OPÇÕES -->
+
         <div class="opcoes-sidebar">
 
-            <a href="<?php echo $base; ?>user/perfil.php">
-                
-                Meu Perfil
-            </a>
+            <?php if ($logado && $nivel === 'admin'): ?>
 
-            <a href="<?php echo $base; ?>user/pedidos.php">
-                <span></span>
-                Meus Pedidos
-            </a>
+                <!-- ADMIN -->
 
-            <a 
-                href="<?php echo $base; ?>logout.php" 
+                <a href="<?php echo $base; ?>admin/admin.php">
+
+                    <span>📊</span>
+
+                    Dashboard
+
+                </a>
+
+
+                <a href="<?php echo $base; ?>admin/perfil.php">
+
+                    <span>👤</span>
+
+                    Meu Perfil
+
+                </a>
+
+
+                <a href="<?php echo $base; ?>admin/contratos.php">
+
+                    <span>📋</span>
+
+                    Contratos
+
+                </a>
+
+
+                <a href="<?php echo $base; ?>admin/clientes.php">
+
+                    <span>👥</span>
+
+                    Clientes
+
+                </a>
+
+
+                <a href="<?php echo $base; ?>index.php">
+
+                    <span>🌐</span>
+
+                    Voltar ao site
+
+                </a>
+
+
+            <?php else: ?>
+
+                <!-- CLIENTE -->
+
+                <a href="<?php echo $base; ?>user/perfil.php">
+
+                    <span>👤</span>
+
+                    Meu Perfil
+
+                </a>
+
+
+                <a href="<?php echo $base; ?>user/pedidos.php">
+
+                    <span>📋</span>
+
+                    Meus Pedidos
+
+                </a>
+
+            <?php endif; ?>
+
+
+            <!-- LOGOUT -->
+
+            <a
+                href="<?php echo $base; ?>logout.php"
                 class="logout"
             >
-                
+
+                <span>🚪</span>
+
                 Sair
+
             </a>
 
         </div>
 
     </aside>
 
+
+    <script>
+
+        function abrirSidebar() {
+
+            document
+                .getElementById('sidebar')
+                .classList.add('ativo');
+
+            document
+                .getElementById('overlay')
+                .classList.add('ativo');
+
+        }
+
+
+        function fecharSidebar() {
+
+            document
+                .getElementById('sidebar')
+                .classList.remove('ativo');
+
+            document
+                .getElementById('overlay')
+                .classList.remove('ativo');
+
+        }
+
+    </script>
+
 <?php endif; ?>
-
-
-<script>
-
-function abrirSidebar() {
-
-    document
-        .getElementById("sidebar")
-        .classList.add("ativo");
-
-    document
-        .getElementById("overlay")
-        .classList.add("ativo");
-
-}
-
-
-function fecharSidebar() {
-
-    document
-        .getElementById("sidebar")
-        .classList.remove("ativo");
-
-    document
-        .getElementById("overlay")
-        .classList.remove("ativo");
-
-}
-
-</script>
