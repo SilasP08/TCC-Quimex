@@ -8,34 +8,43 @@ $erro = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $email = trim($_POST['email']);
+    $senha = trim($_POST['senha']);
 
+    // Busca somente pelo e-mail
     $user = read(
         $pdo,
         'users',
-        "email = '$email' AND senha = '$senha'"
+        "email = '$email'"
     );
 
     if ($user) {
 
-        // Criar a sessão
-        $_SESSION['id_user'] = $user['id_user'];
-        $_SESSION['nome'] = $user['nome'];
-        $_SESSION['email'] = $user['email'];
-        $_SESSION['tipo'] = $user['tipo'];
+        // Verifica a senha
+        if ($senha == $user['senha']) {
 
-        // Só redireciona se o usuário existir
-        header('Location: ./index.php');
-        exit;
+            $_SESSION['id_user'] = $user['id_user'];
+            $_SESSION['nome'] = $user['nome'];
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['tipo'] = $user['tipo'];
+            $_SESSION['nivel'] = $user['nivel'];
+
+            header('Location: ./index.php');
+            exit;
+
+        } else {
+
+            $erro = 'Senha incorreta.';
+
+        }
 
     } else {
 
-        // Senha ou email incorretos
-        $erro = 'E-mail ou senha incorretos.';
+        $erro = 'E-mail não encontrado.';
 
     }
 }
+
 
 ?>
 <!DOCTYPE html>
