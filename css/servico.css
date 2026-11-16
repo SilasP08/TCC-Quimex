@@ -192,6 +192,38 @@ body::after {
 
 }
 
+.service-facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin: 0 0 32px;
+}
+
+.service-fact {
+    padding: 18px;
+    border: 1px solid rgba(248, 250, 252, 0.10);
+    border-radius: 12px;
+    background: rgba(18, 52, 88, 0.42);
+}
+
+.service-fact span {
+    color: var(--gray-text);
+    font-size: 12px;
+}
+
+.service-fact strong {
+    display: block;
+    margin: 8px 0;
+    color: var(--green);
+    font-size: 19px;
+}
+
+.service-fact p {
+    color: var(--gray-text);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
 
 /* ===================================================
    TÍTULO
@@ -447,6 +479,10 @@ body::after {
 =================================================== */
 
 @media (max-width: 700px) {
+
+    .service-facts {
+        grid-template-columns: 1fr;
+    }
 
     .pagina-servico {
 

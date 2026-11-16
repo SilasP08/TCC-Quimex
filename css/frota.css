@@ -326,6 +326,13 @@ body {
     font-size:2.5rem;
 }
 
+.fleet-section-title p {
+    max-width: 800px;
+    margin: 16px auto 0;
+    color: var(--gray-text);
+    line-height: 1.7;
+}
+
 /* =================================
    VEÍCULOS
 ================================= */
@@ -393,6 +400,13 @@ body {
     margin-bottom:15px;
 }
 
+.vehicle-quantity {
+    display: block;
+    margin: -5px 0 15px;
+    color: var(--green);
+    font-weight: 600;
+}
+
 .vehicle-content p{
 
     margin-bottom:20px;
@@ -427,6 +441,10 @@ body {
 
     left: 0;
     top: 9px;
+}
+
+.vehicles-grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
 }
 
 

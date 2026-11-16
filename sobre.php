@@ -58,10 +58,9 @@
                     </h2>
 
                     <p>
-                        A QUIMEX atua no transporte rodoviário de
-                        produtos químicos, oferecendo soluções
-                        logísticas seguras para indústrias em todo
-                        o território nacional.
+                        A QUIMEX é uma proposta de transportadora química
+                        com base planejada em Paulínia-SP e rotas de referência
+                        para polos industriais de diferentes regiões do Brasil.
                     </p>
 
                     <p>
@@ -141,11 +140,11 @@
 
                     <span>LIDERANÇA</span>
 
-                    <h2>Nossa Equipe</h2>
+                    <h2>Estrutura Organizacional</h2>
 
                     <p>
-                        Profissionais responsáveis por conduzir
-                        a QUIMEX com excelência.
+                        A estrutura organizacional combina direção executiva,
+                        diretorias funcionais e áreas operacionais e de apoio.
                     </p>
 
                 </div>
@@ -153,59 +152,51 @@
                 <div class="team-grid">
 
                     <div class="team-card">
-
-                        <div class="team-photo">
-
-                            <img src="img/equipe/diretor.jpg">
-
-                        </div>
-
-                        <h3>Nome do Diretor</h3>
-
-                        <span>Diretor Executivo</span>
-
+                        <div class="team-initials" aria-hidden="true">GP</div>
+                        <h3>Giovanna Andrade Pinheiro</h3>
+                        <span>Diretora Geral / CEO</span>
                     </div>
 
                     <div class="team-card">
-
-                        <div class="team-photo">
-
-                            <img src="img/equipe/operacoes.jpg">
-
-                        </div>
-
-                        <h3>Nome do Gestor</h3>
-
-                        <span>Gerente de Operações</span>
-
+                        <div class="team-initials" aria-hidden="true">YM</div>
+                        <h3>Yves Vicenzo Alves de Oliveira Muniz</h3>
+                        <span>Vice-Diretor Geral / Integração Executiva</span>
                     </div>
 
                     <div class="team-card">
-
-                        <div class="team-photo">
-
-                            <img src="img/equipe/seguranca.jpg">
-
-                        </div>
-
-                        <h3>Nome do Responsável</h3>
-
-                        <span>Coordenador de Segurança</span>
-
+                        <div class="team-initials" aria-hidden="true">AM</div>
+                        <h3>Antonio Vitor Fernandes Leite Melo</h3>
+                        <span>Diretor de Pesquisa e Desenvolvimento</span>
                     </div>
 
                     <div class="team-card">
+                        <div class="team-initials" aria-hidden="true">BC</div>
+                        <h3>Brendel Raynan Barros Silva Crispim</h3>
+                        <span>Diretor de Mercado e Inteligência</span>
+                    </div>
 
-                        <div class="team-photo">
+                    <div class="team-card">
+                        <div class="team-initials" aria-hidden="true">EC</div>
+                        <h3>Erik Silva Camott</h3>
+                        <span>Diretor Comercial e Marketing</span>
+                    </div>
 
-                            <img src="img/equipe/logistica.jpg">
+                    <div class="team-card">
+                        <div class="team-initials" aria-hidden="true">GG</div>
+                        <h3>Guilherme Dantas Gonsalez</h3>
+                        <span>Diretor de Estratégia e Planejamento</span>
+                    </div>
 
-                        </div>
+                    <div class="team-card">
+                        <div class="team-initials" aria-hidden="true">JM</div>
+                        <h3>José Kaio Barbosa de Sousa Morais</h3>
+                        <span>Diretor de Suprimentos e Projetos</span>
+                    </div>
 
-                        <h3>Nome do Responsável</h3>
-
-                        <span>Gerente Logístico</span>
-
+                    <div class="team-card">
+                        <div class="team-initials" aria-hidden="true">SC</div>
+                        <h3>Silas Possarle Carvalho Silva</h3>
+                        <span>Diretor Financeiro</span>
                     </div>
 
                 </div>
@@ -224,25 +215,25 @@
 
                 <div class="number-item">
 
-                    <h2>15+</h2>
+                    <h2>74</h2>
 
-                    <span>Anos de experiência</span>
-
-                </div>
-
-                <div class="number-item">
-
-                    <h2>100+</h2>
-
-                    <span>Clientes atendidos</span>
+                    <span>Veículos previstos no projeto</span>
 
                 </div>
 
                 <div class="number-item">
 
-                    <h2>50+</h2>
+                    <h2>25 km</h2>
 
-                    <span>Veículos especializados</span>
+                    <span>Rota mínima de referência</span>
+
+                </div>
+
+                <div class="number-item">
+
+                    <h2>1.850 km</h2>
+
+                    <span>Rota máxima de referência</span>
 
                 </div>
 

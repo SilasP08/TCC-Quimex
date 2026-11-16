@@ -11,8 +11,6 @@
 
 <body>
 
-    <body>
-
         <?php
         require_once "./partial/header.php";
         ?>
@@ -54,15 +52,13 @@
                     </h2>
 
                     <p>
-                        A QUIMEX possui uma frota moderna e
-                        preparada para atender as mais rigorosas
-                        exigências do transporte químico.
+                    A frota planejada reúne 74 veículos para transporte,
+                    apoio operacional e resposta a emergências.
                     </p>
 
                     <p>
-                        Nossos veículos passam por inspeções,
-                        manutenção preventiva e monitoramento
-                        constante para garantir máxima segurança.
+                        Caminhões-tanque atendem operações regionais. Carretas-tanque
+                        ampliam a capacidade para rotas interestaduais.
                     </p>
 
                 </div>
@@ -84,7 +80,7 @@
         <section class="fleet-section-title">
 
             <h2>
-                VEÍCULOS ESPECIALIZADOS
+                VEÍCULOS DA FROTA PREVISTA
             </h2>
 
         </section>
@@ -100,21 +96,22 @@
                 <!-- 1 -->
                 <article class="vehicle-card">
 
-                    <img src="./img/tanque.jpg" alt="Tanque Inox">
+                    <img src="./img/tanque.jpg" alt="Caminhão-tanque da frota prevista">
 
                     <div class="vehicle-content">
 
-                        <h3>Tanque Inox</h3>
+                        <h3>Caminhão-tanque</h3>
+
+                        <span class="vehicle-quantity">18 veículos · 15 a 20 mil litros</span>
 
                         <p>
-                            Veículo destinado ao transporte de produtos químicos líquidos corrosivos.
+                            Para coletas menores e operações regionais.
                         </p>
 
                         <ul>
-                            <li>Ácido Sulfúrico</li>
-                            <li>Ácido Clorídrico</li>
-                            <li>Ácido Fosfórico</li>
-                            <li>Soda Cáustica</li>
+                            <li>Ácido sulfúrico</li>
+                            <li>Ácido clorídrico</li>
+                            <li>Soda cáustica</li>
                         </ul>
 
                     </div>
@@ -124,21 +121,22 @@
                 <!-- 2 -->
                 <article class="vehicle-card">
 
-                    <img src="./img/pressao.jpg" alt="Vaso de Pressão">
+                    <img src="./img/bitrem-tanque.jfif" alt="Carreta-tanque">
 
                     <div class="vehicle-content">
 
-                        <h3>Vaso de Pressão</h3>
+                        <h3>Carreta-tanque</h3>
+
+                        <span class="vehicle-quantity">42 veículos · 30 a 45 mil litros</span>
 
                         <p>
-                            Equipamento desenvolvido para transporte seguro de gases industriais.
+                            Indicada para transportes interestaduais e cargas de maior volume.
                         </p>
 
                         <ul>
-                            <li>Amônia Anidra</li>
-                            <li>Nitrogênio</li>
-                            <li>Dióxido de Carbono</li>
-                            <li>GLP Industrial</li>
+                            <li>Metanol</li>
+                            <li>Etanol</li>
+                            <li>Solventes</li>
                         </ul>
 
                     </div>
@@ -148,22 +146,17 @@
                 <!-- 3 -->
                 <article class="vehicle-card">
 
-                    <img src="./img/tanque-alimenticio.jpg" alt="Tanque Alimentício">
+                    <img src="./img/caminhao.jpeg" alt="Veículos de apoio">
 
                     <div class="vehicle-content">
 
-                        <h3>Tanque Alimentício</h3>
+                        <h3>Veículos de apoio</h3>
+
+                        <span class="vehicle-quantity">10 utilitários leves</span>
 
                         <p>
-                            Utilizado para líquidos alimentícios que exigem alto padrão sanitário.
+                            Apoio operacional, logístico e documental.
                         </p>
-
-                        <ul>
-                            <li>Glicose Líquida</li>
-                            <li>Óleo Vegetal</li>
-                            <li>Xarope de Milho</li>
-                            <li>Álcool Alimentício</li>
-                        </ul>
 
                     </div>
 
@@ -176,41 +169,45 @@
 
                     <div class="vehicle-content">
 
-                        <h3>Graneleiro Químico</h3>
+                        <h3>Veículos de emergência</h3>
+
+                        <span class="vehicle-quantity">4 veículos</span>
 
                         <p>
-                            Indicado para o transporte de produtos químicos sólidos a granel.
+                            Suporte para equipes de resposta rápida a ocorrências.
                         </p>
-
-                        <ul>
-                            <li>Ureia</li>
-                            <li>Nitrato de Amônio</li>
-                            <li>Sulfato de Amônio</li>
-                            <li>Carbonato de Sódio</li>
-                        </ul>
 
                     </div>
 
                 </article>
 
+            </div>
+
+        </section>
+
+        <section class="fleet-section-title">
+            <h2>TIPOS DE CARGA E PRODUTOS TRANSPORTADOS</h2>
+            <p>A escolha do veículo depende da classificação, compatibilidade e exigências de segurança da carga.</p>
+        </section>
+
+        <section class="vehicles">
+            <div class="container vehicles-grid">
                 <!-- 5 -->
                 <article class="vehicle-card">
 
-                    <img src="./img/bitrem-tanque.jfif" alt="Bitrem Tanque">
+                    <img src="./img/tanque.jpg" alt="Produtos químicos perigosos">
 
                     <div class="vehicle-content">
 
-                        <h3>Bitrem Tanque</h3>
+                        <h3>Produtos perigosos</h3>
 
                         <p>
-                            Grande capacidade para operações de longa distância.
+                            Cargas corrosivas e inflamáveis, identificadas conforme sua classe de risco.
                         </p>
 
                         <ul>
-                            <li>Etanol Industrial</li>
-                            <li>Metanol</li>
-                            <li>Acetona</li>
-                            <li>Tolueno</li>
+                            <li>Classe 8: ácido sulfúrico, ácido clorídrico e soda cáustica</li>
+                            <li>Classe 3: metanol, etanol e solventes</li>
                         </ul>
 
                     </div>
@@ -220,21 +217,20 @@
                 <!-- 6 -->
                 <article class="vehicle-card">
 
-                    <img src="./img/isotanque.jpg" alt="Isotanque">
+                    <img src="./img/graneleiro.jpg" alt="Fertilizantes, resinas e produtos sólidos">
 
                     <div class="vehicle-content">
 
-                        <h3>Container Isotanque</h3>
+                        <h3>Outros produtos industriais</h3>
 
                         <p>
-                            Equipamento para transporte intermodal de produtos químicos especiais.
+                            Transporte em equipamento compatível com as características da carga.
                         </p>
 
                         <ul>
-                            <li>Peróxido de Hidrogênio</li>
-                            <li>Fenol</li>
-                            <li>Monoetilenoglicol</li>
-                            <li>Ácido Acético</li>
+                            <li>Fertilizantes líquidos</li>
+                            <li>Resinas industriais</li>
+                            <li>Sólidos: grãos, pós ou produtos embalados</li>
                         </ul>
 
                     </div>
