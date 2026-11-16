@@ -65,7 +65,7 @@ $pedidos = readAll(
                 </a>
 
                 <a href="<?php echo $base; ?>servico.php" class="btn-novo-pedido">
-                    + Novo pedido
+                    <i class="bi bi-plus-circle" aria-hidden="true"></i> Novo pedido
                 </a>
 
             </div>
@@ -195,7 +195,7 @@ $pedidos = readAll(
                 <div class="sem-pedidos">
 
                     <div class="icone-pedidos">
-                        📋
+                        <i class="bi bi-receipt" aria-hidden="true"></i>
                     </div>
 
                     <h2>

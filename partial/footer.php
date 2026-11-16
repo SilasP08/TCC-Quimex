@@ -62,16 +62,16 @@
 
             <div class="socials">
 
-                <a href="#">
-                    <i class="fa-brands fa-instagram"></i>
+                <a href="#" aria-label="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
                 </a>
 
-                <a href="#">
-                    <i class="fa-brands fa-facebook-f"></i>
+                <a href="#" aria-label="Facebook">
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
                 </a>
 
-                <a href="#">
-                    <i class="fa-brands fa-linkedin-in"></i>
+                <a href="#" aria-label="LinkedIn">
+                    <i class="bi bi-linkedin" aria-hidden="true"></i>
                 </a>
 
             </div>

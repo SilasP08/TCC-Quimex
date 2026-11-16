@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="input-box">
 
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="bi bi-envelope" aria-hidden="true"></i>
 
                     <input type="email" name="email" placeholder="Digite seu e-mail" required>
 
@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <div class="input-box">
 
-                    <i class="fa-solid fa-lock"></i>
+                    <i class="bi bi-lock" aria-hidden="true"></i>
 
                     <input type="password" name="senha" placeholder="Digite sua senha" required>
 

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/cadastro.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -40,7 +39,7 @@
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-user"></i>
+                        <i class="bi bi-person" aria-hidden="true"></i>
 
                         <input type="text" name="nome" placeholder="Nome Completo">
 
@@ -48,7 +47,7 @@
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-envelope"></i>
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
 
                         <input type="email" name="email" placeholder="E-mail">
 
@@ -56,7 +55,7 @@
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-phone"></i>
+                        <i class="bi bi-telephone" aria-hidden="true"></i>
 
                         <input type="text" name="telefone" placeholder="Telefone">
 
@@ -64,7 +63,7 @@
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-id-card"></i>
+                        <i class="bi bi-person-vcard" aria-hidden="true"></i>
 
                         <input type="text" name="cpf_cnpj" placeholder="CPF ou CNPJ">
 
@@ -72,7 +71,7 @@
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-user-group"></i>
+                        <i class="bi bi-people" aria-hidden="true"></i>
 
                         <select name="tipo" required>
 
@@ -90,13 +89,13 @@
 
                         </select>
 
-                        <i class="fa-solid fa-chevron-down select-arrow"></i>
+                        <i class="bi bi-chevron-down select-arrow" aria-hidden="true"></i>
 
                     </div>
 
                     <div class="input-box">
 
-                        <i class="fa-solid fa-lock"></i>
+                        <i class="bi bi-lock" aria-hidden="true"></i>
 
                         <input type="password" name="senha" placeholder="Senha">
 

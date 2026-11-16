@@ -87,7 +87,7 @@
 
                 <div class="mission-card">
 
-                    <i class="fas fa-bullseye"></i>
+                    <i class="bi bi-bullseye" aria-hidden="true"></i>
 
                     <h3>Missão</h3>
 
@@ -100,7 +100,7 @@
 
                 <div class="mission-card">
 
-                    <i class="fas fa-eye"></i>
+                    <i class="bi bi-eye" aria-hidden="true"></i>
 
                     <h3>Visão</h3>
 
@@ -113,7 +113,7 @@
 
                 <div class="mission-card">
 
-                    <i class="fas fa-handshake"></i>
+                    <i class="bi bi-handshake" aria-hidden="true"></i>
 
                     <h3>Valores</h3>
 

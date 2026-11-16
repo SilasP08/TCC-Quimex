@@ -9,7 +9,6 @@ $base = '/TCC-Quimex/';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php echo $base; ?>css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Document</title>
 </head>
 
@@ -209,7 +208,7 @@ $base = '/TCC-Quimex/';
         <div class="card">
 
             <div class="icon">
-                <i class="fa-solid fa-medal"></i>
+                <i class="bi bi-award" aria-hidden="true"></i>
             </div>
 
             <h3>SISTEMA DE GESTÃO</h3>
@@ -230,7 +229,7 @@ $base = '/TCC-Quimex/';
         <div class="card">
 
             <div class="icon">
-                <i class="fa-solid fa-shield-heart"></i>
+                <i class="bi bi-shield-check" aria-hidden="true"></i>
             </div>
 
             <h3>SAÚDE E SEGURANÇA</h3>
@@ -251,7 +250,7 @@ $base = '/TCC-Quimex/';
         <div class="card">
 
             <div class="icon">
-                <i class="fa-solid fa-earth-americas"></i>
+                <i class="bi bi-globe-americas" aria-hidden="true"></i>
             </div>
 
             <h3>MEIO AMBIENTE</h3>

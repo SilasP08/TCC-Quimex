@@ -189,7 +189,7 @@ if ($logado && isset($_SESSION['nivel'])) {
 
                 <a href="<?php echo $base; ?>admin/admin.php">
 
-                    <span>📊</span>
+                    <i class="bi bi-speedometer2" aria-hidden="true"></i>
 
                     Dashboard
 
@@ -198,7 +198,7 @@ if ($logado && isset($_SESSION['nivel'])) {
 
                 <a href="<?php echo $base; ?>admin/contratos.php">
 
-                    <span>📋</span>
+                    <i class="bi bi-list-check" aria-hidden="true"></i>
 
                     Contratos
 
@@ -207,7 +207,7 @@ if ($logado && isset($_SESSION['nivel'])) {
 
                 <a href="<?php echo $base; ?>index.php">
 
-                    <span>🌐</span>
+                    <i class="bi bi-globe2" aria-hidden="true"></i>
 
                     Voltar ao site
 
@@ -220,7 +220,7 @@ if ($logado && isset($_SESSION['nivel'])) {
 
                 <a href="<?php echo $base; ?>user/perfil.php">
 
-                    <span>👤</span>
+                    <i class="bi bi-person" aria-hidden="true"></i>
 
                     Meu Perfil
 
@@ -229,7 +229,7 @@ if ($logado && isset($_SESSION['nivel'])) {
 
                 <a href="<?php echo $base; ?>user/pedidos.php">
 
-                    <span>📋</span>
+                    <i class="bi bi-receipt" aria-hidden="true"></i>
 
                     Meus Pedidos
 
@@ -245,7 +245,7 @@ if ($logado && isset($_SESSION['nivel'])) {
                 class="logout"
             >
 
-                <span>🚪</span>
+                <i class="bi bi-box-arrow-right" aria-hidden="true"></i>
 
                 Sair
 
