@@ -210,6 +210,12 @@ body::after {
     transition: var(--transition);
 }
 
+.sidebar nav a .bi {
+    width: 18px;
+    text-align: center;
+    font-size: 16px;
+}
+
 
 .sidebar nav a:hover {
     color: var(--white);
@@ -379,7 +385,7 @@ body::after {
 .cards {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 
     gap: 18px;
 
@@ -443,6 +449,11 @@ body::after {
     color: var(--green);
 
     font-size: 21px;
+}
+
+.icone .bi {
+    font-size: 21px;
+    line-height: 1;
 }
 
 

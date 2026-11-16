@@ -11,11 +11,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $_POST['email'];
     $senha = $_POST['senha'];
 
-    $user = read(
-        $pdo,
-        'users',
-        "email = '$email' AND senha = '$senha'"
+    $stmt = $pdo->prepare(
+        'SELECT * FROM users WHERE email = ? AND senha = ?'
     );
+    $stmt->execute([$email, $senha]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
     if ($user) {
 
@@ -24,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['nome'] = $user['nome'];
         $_SESSION['email'] = $user['email'];
         $_SESSION['tipo'] = $user['tipo'];
+        $_SESSION['nivel'] = $user['nivel'] ?? 'cliente';
 
         // Só redireciona se o usuário existir
         header('Location: ./index.php');
