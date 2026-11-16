@@ -26,9 +26,9 @@
             <ul>
                 <li><a href="./index.php">Home</a></li>
                 <li><a href="./sobre.php">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
+                <li><a href="./servico.php">Serviços</a></li>
                 <li><a href="./frota.php">Frota</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="./contato.php">Contato</a></li>
             </ul>
 
         </div>
@@ -57,7 +57,7 @@
             <ul>
                 <li>(11) 99999-9999</li>
                 <li>contato@quimex.com.br</li>
-                <li>Santo André - SP</li>
+                <li>Paulínia - SP · sede planejada</li>
             </ul>
 
             <div class="socials">

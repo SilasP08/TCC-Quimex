@@ -1,0 +1,120 @@
+.contato-page {
+    min-height: 100vh;
+    padding-top: 90px;
+    background: #07060D;
+    color: #F8FAFC;
+}
+
+.contato-banner {
+    padding: 90px 20px 70px;
+    text-align: center;
+    background: linear-gradient(135deg, #0b1824, #123458);
+}
+
+.contato-banner span,
+.contato-label {
+    color: #36BF66;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.contato-banner h1 {
+    margin: 12px 0;
+    font-size: clamp(32px, 5vw, 52px);
+}
+
+.contato-banner p {
+    max-width: 680px;
+    margin: auto;
+    color: rgba(248, 250, 252, 0.75);
+    line-height: 1.7;
+}
+
+.contato-section {
+    width: min(1100px, 90%);
+    margin: auto;
+    padding: 70px 0 90px;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.contato-card {
+    min-height: 180px;
+    padding: 26px;
+    border: 1px solid rgba(248, 250, 252, 0.1);
+    border-radius: 16px;
+    background: rgba(18, 52, 88, 0.42);
+}
+
+.contato-card a,
+.contato-card strong {
+    display: block;
+    margin: 14px 0 8px;
+    color: #F8FAFC;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.contato-card a:hover {
+    color: #36BF66;
+}
+
+.contato-card p {
+    color: rgba(248, 250, 252, 0.72);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contato-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    margin-top: 30px;
+    padding: 28px;
+    border-radius: 16px;
+    background: rgba(54, 191, 102, 0.1);
+}
+
+.contato-cta h2 {
+    margin-bottom: 8px;
+    font-size: 22px;
+}
+
+.contato-cta p {
+    color: rgba(248, 250, 252, 0.75);
+    line-height: 1.6;
+}
+
+.contato-cta a {
+    flex-shrink: 0;
+    padding: 13px 20px;
+    border-radius: 9px;
+    background: #36BF66;
+    color: #F8FAFC;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.contato-cta a:hover {
+    background: #2ea858;
+}
+
+@media (max-width: 750px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}

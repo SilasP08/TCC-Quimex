@@ -61,7 +61,7 @@ $base = '/TCC-Quimex/';
                     Sistemas inteligentes para aumentar produtividade.
                 </p>
 
-                <a href="#">Nossos serviços</a>
+                <a href="./servico.php">Nossos serviços</a>
 
             </div>
 
@@ -85,7 +85,7 @@ $base = '/TCC-Quimex/';
                     Profissionais preparados para grandes desafios.
                 </p>
 
-                <a href="#">Entrar em contato</a>
+                <a href="./contato.php">Entrar em contato</a>
 
             </div>
 

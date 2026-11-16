@@ -45,20 +45,16 @@ if ($logado && isset($_SESSION['nivel'])) {
 
         <nav class="menu">
 
-            <a href="<?php echo $base; ?>admin.php">
+            <a href="<?php echo $base; ?>admin/admin.php">
                 Dashboard
             </a>
 
-            <a href="<?php echo $base; ?>admin/perfil.php">
-                Meu Perfil
-            </a>
-
-            <a href="<?php echo $base; ?>admin/pedidos.php">
+            <a href="<?php echo $base; ?>admin/contratos.php">
                 Contratos
             </a>
 
-            <a href="<?php echo $base; ?>admin/clientes.php">
-                Clientes
+            <a href="<?php echo $base; ?>index.php">
+                Voltar ao site
             </a>
 
         </nav>
@@ -200,29 +196,11 @@ if ($logado && isset($_SESSION['nivel'])) {
                 </a>
 
 
-                <a href="<?php echo $base; ?>admin/perfil.php">
-
-                    <span>👤</span>
-
-                    Meu Perfil
-
-                </a>
-
-
                 <a href="<?php echo $base; ?>admin/contratos.php">
 
                     <span>📋</span>
 
                     Contratos
-
-                </a>
-
-
-                <a href="<?php echo $base; ?>admin/clientes.php">
-
-                    <span>👥</span>
-
-                    Clientes
 
                 </a>
 
